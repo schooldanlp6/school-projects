@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nano Magic</title>
+
+</head>
+
+<body style=" background-color: black;">
+    <dialog open class="dialog">This is to warn of epilepsi</dialog>
+    <div id="mainframe"
+        style="border: 1vh solid black;padding: 1px; height: 85vh; width: 90%; margin: auto; backgroundColor: white;"
+        onload="" onmousemove=" getXY(event), ChangeColor()" onclick="Printertm()">
+    </div>
+    <script>
+        function Printertm() {
+            print
+        }
+        function ChangeColor() {
+            import Math,
+            //while (true)
+            //print
+            let coloren = Math.random(1, 10)
+            //let color = "white"
+
+            if (coloren == 1)
+                color = "black"
+
+            else if (coloren == 2)
+                color = "white"
+
+            else if (coloren == 3)
+                color = "blue"
+
+            else if (coloren == 4)
+                color = "green"
+
+            else if (coloren == 5)
+                color = "red"
+
+            else if (coloren == 6)
+                color = "magenta"
+
+            else if (coloren == 7)
+                color = "cyan"
+
+            else if (coloren == 8)
+                color = "brown"
+
+            else if (coloren == 9)
+                color = "yellow"
+
+            else if (coloren == 10)
+                color = "dark_blue"
+            
+
+            document.getElementById("mainframe").style.backgroundColor = color;
+        }
+
+        function getXY(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            let text = "X coords: " + x + "<br>" + "Y coords: " + y + "<br><br><br><br><br><br><br><br><br><br><br><br>";
+            document.getElementById("mainframe").innerHTML = text;
+        }
+
+        while (true())
+            onmousemove = "ChangeColor"
+
+    </script>
+</body>
+
+</html>

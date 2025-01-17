@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nano Magic</title>
+</head>
+
+<body style="background-color: black;">
+    <dialog open class="dialog">This is to warn of epilepsy</dialog>
+    <div id="mainframe" style="border: 1vh solid black; padding: 1px; height: 85vh; width: 90%; margin: auto; background-color: white;" onmousemove="getXY(event); ChangeColor()" onclick="Printertm()">
+    </div>
+    
+    <script>
+        // Function to print the page
+        function Printertm() {
+            window.print();
+        }
+
+        // Function to change the background color
+        function ChangeColor() {
+            // Generate a random number between 1 and 10
+            let coloren = Math.floor(Math.random() * 10) + 1;
+            let color;
+
+            // Set color based on random number
+            if (coloren === 1) color = "black";
+            else if (coloren === 2) color = "white";
+            else if (coloren === 3) color = "blue";
+            else if (coloren === 4) color = "green";
+            else if (coloren === 5) color = "red";
+            else if (coloren === 6) color = "magenta";
+            else if (coloren === 7) color = "cyan";
+            else if (coloren === 8) color = "brown";
+            else if (coloren === 9) color = "yellow";
+            else if (coloren === 10) color = "darkblue"; // "dark_blue" is not a valid color name
+
+            // Set the background color of the mainframe div
+            document.getElementById("mainframe").style.backgroundColor = color;
+        }
+
+        // Function to get and display mouse coordinates
+        function getXY(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            let text = "X coords: " + x + "<br>" + "Y coords: " + y + "<br><br><br><br><br><br><br><br><br><br><br><br>";
+            document.getElementById("mainframe").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
